@@ -3,3 +3,4 @@ spack/*
 .bashrc
 .bash_profile
 .bash_history
+*.swp
