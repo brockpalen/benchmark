@@ -26,4 +26,5 @@ echo "######################################################"
 echo ""
 date
 echo "=======> Ending: $MOD"
+module rm $MOD
 echo ""
