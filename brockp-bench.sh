@@ -22,9 +22,6 @@ module load $GCCMOD
 # make sure spack picks up new gcc7.2 compiler we will use for all other builds
 spack compiler find
 
-# install stream benchmark
-time spack install stream@5.10%gcc@7.2.0
-
 # install HPL, also installs openblas with auto arch detection
 time spack install hpl@2.2%gcc@7.2.0
 
