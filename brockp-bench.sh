@@ -1,6 +1,13 @@
 #!/bin/bash
 
-yum -y install gcc gcc-gfortran gcc-c++ file git make which patch bzip2 rsh
+#minimum required to operate suite
+yum -y install gcc gcc-gfortran gcc-c++ file git make which patch bzip2 rsh which
+
+useradd brockp
+su - brockp
+cd
+
+####  start user portion of benchmark setup
 
 git clone https://github.com/spack/spack.git
 

@@ -18,6 +18,9 @@ MOD=$(module avail openfoam-org 2>&1 | tail -n 1)
 MPI=$(module avail openmpi 2>&1 | tail -n 1)
 module load $MOD $MPI
 
+# openfoam tutorial envrionment is picky
+source $WM_PROJECT_DIR/etc/bashrc
+
 echo "######################################################"
 echo ""
 echo "=======> Starting: $MOD"
@@ -30,7 +33,7 @@ cp -fr $WM_PROJECT_DIR/tutorials/incompressible/simpleFoam/motorBike .
 
 cd motorBike
 
-bash Allrun
+./Allrun
 cd ../../
 
 

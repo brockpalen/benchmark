@@ -11,7 +11,8 @@ docker run --rm -i -t -v <localpath>:/root  centos /bin/bash
 
 Then to start environment source `brockp-bench.sh`
 
-This will setup spack, add to environment and start build of GCC 7 and a few applications
+This will setup install system deps, add a user brockp 
+Setup spack, add to environment and start build of GCC 7 and a few applications
 
 ## TODO's
 
