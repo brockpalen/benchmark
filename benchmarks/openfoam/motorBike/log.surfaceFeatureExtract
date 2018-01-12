@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.1
+Exec   : surfaceFeatureExtract
+Date   : Dec 20 2017
+Time   : 11:53:59
+Host   : "f6984bde6cd0"
+PID    : 28431
+Case   : /root/benchmarks/openfoam/motorBike
+nProcs : 1
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeatureExtractDict
+
+Surface            : "motorBike.obj"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+
+
+--> FOAM FATAL ERROR: 
+Cannnot read "/root/benchmarks/openfoam/motorBike/constant/triSurface/motorBike.obj"
+
+    From function bool Foam::triSurface::read(const Foam::fileName&, const Foam::word&, bool)
+    in file triSurface/triSurface.C at line 358.
+
+FOAM exiting
+
