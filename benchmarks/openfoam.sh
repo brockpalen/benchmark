@@ -23,7 +23,13 @@ echo ""
 echo "=======> Starting: $MOD"
 date
 
-cd openfoam/motorBike
+cd openfoam
+
+#copy in  motorBike example
+cp -fr $WM_PROJECT_DIR/tutorials/incompressible/simpleFoam/motorBike .
+
+cd motorBike
+
 bash Allrun
 cd ../../
 
