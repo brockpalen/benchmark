@@ -1,11 +1,4 @@
-#!/bin/bash
-
-#minimum required to operate suite
-yum -y install gcc gcc-gfortran gcc-c++ file git make which patch bzip2 rsh which
-
-useradd brockp
-su - brockp
-cd
+#setups user environment and basic compiler
 
 ####  start user portion of benchmark setup
 
@@ -28,4 +21,3 @@ module load $GCCMOD
 
 # make sure spack picks up new gcc7.2 compiler we will use for all other builds
 spack compiler find
-
