@@ -12,7 +12,7 @@ spack bootstrap
 #add mdoule to CLI
 source /root/spack/share/spack/setup-env.sh
 
-time spack install hpl@2.2%gcc@7.2.0
+time spack install hpl@2.2%gcc@6.4.0
 
 MOD=$(module avail hpl 2>&1 | tail -n 1)
 MPI=$(module avail openmpi 2>&1 | tail -n 1)
