@@ -1,6 +1,8 @@
 # Benchamark Setup script for RHEL7/CentOS 7
 
-Setup in Docker
+After cloning be sure to set values in `benchmarks/SETUP.sh` for your system type.  Some benchmarks like HPL require complex inputs that are not auto generated.
+
+## Setup in Docker
 
 ```
 docker pull centos
