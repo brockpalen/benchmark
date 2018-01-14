@@ -10,7 +10,7 @@
 spack bootstrap
 
 #add mdoule to CLI
-source /root/spack/share/spack/setup-env.sh
+source ~/spack/share/spack/setup-env.sh
 
 FORCE_UNSAFE_CONFIGURE=1 spack install --no-checksum openfoam-org@4.1%gcc@6.4.0
 
@@ -33,7 +33,47 @@ cp -fr $WM_PROJECT_DIR/tutorials/incompressible/simpleFoam/motorBike .
 
 cd motorBike
 
+#setup decomposeParDict to auto partition and correct core count
+cat > system/decomposeParDict << EOF
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+
+
+numberOfSubdomains $NCPUS;
+
+//method          hierarchical;
+method          scotch;
+EOF
+
+#run foam
 ./Allrun
+
+cd ..
+
+
+echo "######################################################"
+echo "======> Start second foam case"
+date
+
+#copy in  motorBike example
+cp -fr $WM_PROJECT_DIR/tutorials/multiphase/interDyMFoam/ras/DTCHull .
+
+cd DTCHull
+
+sed -i -e 's/numberOfSubdomains 8/numberOfSubdomains '"$NCPUS"'/' system/decomposeParDict
+
+#run foam
+./Allrun
+
+echo "======> End second foam case"
+date
+
+
 cd ../../
 
 
