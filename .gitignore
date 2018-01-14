@@ -4,3 +4,10 @@ spack/*
 .bash_profile
 .bash_history
 *.swp
+
+# Terraform files / Cloud creds
+*.tfvars
+*.json
+*.terraform
+*.tfstate
+*.tfstate.backup
