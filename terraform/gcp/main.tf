@@ -29,4 +29,8 @@ resource "google_compute_instance" "gcphost" {
       preemptible = true
       automatic_restart = false
     }
+
+    metadata {
+       sshKeys = "${var.gcp_user}:${file(var.gcp_ssh_pub_key)}"
+    }
 }

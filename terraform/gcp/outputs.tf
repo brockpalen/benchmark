@@ -4,4 +4,4 @@ output "gcp_public_ips" {
 
 output "gcp_cpu" {
   value = "${google_compute_instance.gcphost.*.cpu_platform}"
-} 
+}

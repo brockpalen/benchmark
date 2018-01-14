@@ -30,3 +30,11 @@ variable "gcp_nodetype" {
   default = "n1-standard-1"
 }
 
+variable "gcp_user" {
+  description = "GCP SSH user"
+  default = "brockp"
+}
+
+variable "gcp_ssh_pub_key" {
+  description = "path to SSH public key"
+}
