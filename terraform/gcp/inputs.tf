@@ -17,22 +17,22 @@ variable "gcp_project" {
 
 variable "gcp_hostname" {
   description = "Used in compute nodes resource name"
-  default = "gcp"
+  default     = "gcp"
 }
 
 variable "gcp_count" {
   description = "Number of machines to start"
-  default = 1
+  default     = 1
 }
 
 variable "gcp_nodetype" {
   description = "GCP node type defaults n1-standard-1"
-  default = "n1-standard-1"
+  default     = "n1-standard-1"
 }
 
 variable "gcp_user" {
   description = "GCP SSH user"
-  default = "brockp"
+  default     = "brockp"
 }
 
 variable "gcp_ssh_pub_key" {
