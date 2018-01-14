@@ -4,7 +4,7 @@
 
 git clone https://github.com/spack/spack.git
 
-PATH=$PATH:~/spack/bin
+PATH=$PATH:$PWD/spack/bin
 
 #intall helper utilities for spack operation like modules
 spack bootstrap
