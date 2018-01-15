@@ -11,3 +11,5 @@ NCPUS=$(lstopo-no-graphics  --only CORE | wc -l)
 ## Setup options
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source $DIR/../spack/share/spack/setup-env.sh

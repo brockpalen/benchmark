@@ -5,12 +5,9 @@
 # Look at: http://hpl-calculator.sourceforge.net/
 
 
-. ./SETUP.sh
+source ./SETUP.sh
 #intall helper utilities for spack operation like modules
 spack bootstrap
-
-#add mdoule to CLI
-source ../spack/share/spack/setup-env.sh
 
 FORCE_UNSAFE_CONFIGURE=1 spack install --no-checksum openfoam-org@4.1%gcc@6.4.0
 
