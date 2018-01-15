@@ -2,14 +2,12 @@
 ## Stream Benchmark for Memory Bandwidth
 #
 
+source ./SETUP.sh
+
 #intall helper utilities for spack operation like modules
 spack bootstrap
 
-#add mdoule to CLI
-source /root/spack/share/spack/setup-env.sh
-
-
-time spack install stream@5.10%gcc@7.2.0 +openmp cppflags='-DSTREAM_ARRAY_SIZE=45088768'
+time spack install stream@5.10%gcc@6.2.0 +openmp cppflags='-DSTREAM_ARRAY_SIZE=45088768'
 
 MOD=$(module avail stream 2>&1 | tail -n 1)
 module load $MOD

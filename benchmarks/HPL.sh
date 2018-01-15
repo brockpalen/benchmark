@@ -5,12 +5,9 @@
 # Look at: http://hpl-calculator.sourceforge.net/
 
 
-. ./SETUP.sh
+source ./SETUP.sh
 #intall helper utilities for spack operation like modules
 spack bootstrap
-
-#add mdoule to CLI
-source /root/spack/share/spack/setup-env.sh
 
 time spack install hpl@2.2%gcc@6.4.0
 
