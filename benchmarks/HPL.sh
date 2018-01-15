@@ -21,7 +21,7 @@ echo "=======> Starting: $MOD"
 date
 
 cd HPL
-mpirun --allow-run-as-root -np $NCPUS xhpl
+time mpirun --allow-run-as-root -np $NCPUS xhpl
 cd ..
 
 

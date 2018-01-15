@@ -48,7 +48,7 @@ method          scotch;
 EOF
 
 #run foam
-./Allrun
+time ./Allrun
 
 cd ..
 
@@ -65,7 +65,7 @@ cd DTCHull
 sed -i -e 's/numberOfSubdomains 8/numberOfSubdomains '"$NCPUS"'/' system/decomposeParDict
 
 #run foam
-./Allrun
+time ./Allrun
 
 echo "======> End second foam case"
 date
