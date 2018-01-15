@@ -30,6 +30,22 @@ output "gcp_standard_ips" {
   value = "${module.gcp-standard.gcp_public_ips}"
 }
 
+## Google Cloud skylake CPUs version
+module "gcp-skylake" {
+  source               = "./gcp"
+  gcp_hostname         = "gcp-skylake"
+  gcp_cred             = "terraform-admin.json"
+  gcp_count            = 1
+  gcp_nodetype         = "n1-standard-32"
+  gcp_min_cpu_platform = "Intel Skylake"
+  gcp_user             = "brockp"
+  gcp_ssh_pub_key      = "/home/brockp/.ssh/id_rsa.pub"
+}
+
+output "gcp_skylake_ips" {
+  value = "${module.gcp-skylake.gcp_public_ips}"
+}
+
 ################################################
 # AWS
 ################################################

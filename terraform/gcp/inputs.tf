@@ -38,3 +38,8 @@ variable "gcp_user" {
 variable "gcp_ssh_pub_key" {
   description = "path to SSH public key"
 }
+
+variable "gcp_min_cpu_platform" {
+  description = "See: https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform"
+  default     = "Intel Sandy Bridge"
+}

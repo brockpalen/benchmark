@@ -31,6 +31,8 @@ resource "google_compute_instance" "gcphost" {
     automatic_restart = false
   }
 
+  min_cpu_platform = "${var.gcp_min_cpu_platform}"
+
   metadata {
     sshKeys = "${var.gcp_user}:${file(var.gcp_ssh_pub_key)}"
   }
