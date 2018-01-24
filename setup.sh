@@ -2,7 +2,8 @@
 
 ####  start user portion of benchmark setup
 
-git clone https://github.com/spack/spack.git
+#git clone https://github.com/spack/spack.git
+git clone https://github.com/brockpalen/spack.git
 
 PATH=$PATH:$PWD/spack/bin
 
