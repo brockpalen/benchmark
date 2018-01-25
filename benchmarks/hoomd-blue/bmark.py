@@ -46,7 +46,7 @@ else:
 hoomd.option.set_autotuner_params(enable=False)
 
 # full benchmark
-tps = hoomd.benchmark.series(warmup=0, repeat=1, steps=500000)
+tps = hoomd.benchmark.series(warmup=0, repeat=1, steps=250000)
 #tps = hoomd.benchmark.series(warmup=0, repeat=1, steps=50000, limit_hours=20.0/3600.0)
 
 tps = numpy.average(tps)
