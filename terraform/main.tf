@@ -4,7 +4,7 @@
 ## Google standard Sandy Bridge
 module "gcp-sandybridge" {
   source          = "./gcp"
-  gcp_hostname    = "gcp-highcpu"
+  gcp_hostname    = "gcp-sandybridge"
   gcp_cred        = "terraform-admin.json"
   gcp_count       = 1
   gcp_nodetype    = "n1-highcpu-32"
