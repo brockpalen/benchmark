@@ -11,9 +11,9 @@ NTHREADS=$(lstopo-no-graphics  --only PU | wc -l)
 
 echo "System has $NTHREADS threads"
 
-SCFLAGS='-march=native -O2'
-SCXXFLAGS='-march=native -O2'
-SFFLAGS='-march=native -O2'
+SCFLAGS='-march=native'
+SCXXFLAGS='-march=native'
+SFFLAGS='-march=native'
 
 
 ## Setup options
