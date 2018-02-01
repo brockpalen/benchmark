@@ -7,7 +7,7 @@ source ./SETUP.sh
 #intall helper utilities for spack operation like modules
 spack bootstrap
 
-spack install hoomd-blue@2.2.2%gcc@6.4.0
+spack install hoomd-blue@2.2.2%gcc@6.4.0 cflags=$SCFLAGS cxxflags=$SCXXFLAGS
 
 MOD=$(module avail hoomd-blue 2>&1 | tail -n 1)
 MPI=$(module avail openmpi 2>&1 | tail -n 1)

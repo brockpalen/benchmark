@@ -4,8 +4,16 @@
 #real cores
 NCPUS=$(lstopo-no-graphics  --only CORE | wc -l)
 
+echo "System has $NCPUS cores"
+
 #hyperthreads
-# NCPUS=$(lstopo-no-graphics  --only PU | wc -l)
+NTHREADS=$(lstopo-no-graphics  --only PU | wc -l)
+
+echo "System has $NTHREADS threads"
+
+SCFLAGS='-march=native -O2'
+SCXXFLAGS='-march=native -O2'
+SFFLAGS='-march=native -O2'
 
 
 ## Setup options
