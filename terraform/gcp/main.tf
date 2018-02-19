@@ -14,7 +14,7 @@ resource "google_compute_instance" "gcphost" {
 
   boot_disk {
     initialize_params {
-      image = "centos-7"
+      image = "arc-ts-benchmark"
       size  = "15"
     }
   }
